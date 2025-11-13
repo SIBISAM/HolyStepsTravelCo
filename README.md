@@ -1,2 +1,0 @@
-# HolyStepsTravelCo
-Trip Web
