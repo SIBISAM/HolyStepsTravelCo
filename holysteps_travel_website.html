@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>HolySteps Travel Co. — Sabarimala Pilgrimage Tours</title>
+  <meta name="description" content="HolySteps Travel Co. — Golden devotional Sabarimala pilgrimage packages. Safe, comfortable, and devotion-centered journeys.">
+  <meta name="theme-color" content="#1a1323">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta property="og:title" content="HolySteps Travel Co. — Sabarimala Pilgrimage Tours">
+  <meta property="og:description" content="Golden devotional Sabarimala pilgrimage packages. Family, group and senior-friendly tours.">
+  <meta property="og:type" content="website">
+  <style>
+    :root{
+      --gold:#D4AF37; /* Sacred Gold */
+      --gold-dark:#b68f2a;
+      --navy:#071328;  /* Deep Navy (almost black) */
+      --accent:#3b2b1f; /* deep brown warm */
+      --beige:#F7EFE0;
+      --max-width:1200px;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;color:#201a18;margin:0;background:#faf6f2}
+    a{color:var(--gold)}
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{background:linear-gradient(180deg,var(--navy),#081328);color:var(--beige);position:sticky;top:0;z-index:60;box-shadow:0 6px 30px rgba(2,6,23,0.45)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;max-width:var(--max-width);margin:0 auto}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-mark{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:800;font-family:Playfair Display;font-size:18px;box-shadow:0 6px 18px rgba(0,0,0,0.35)}
+    .brand-title{line-height:1}
+    .brand-title h1{font-family:Playfair Display;margin:0;color:var(--beige);font-size:20px}
+    .brand-title p{margin:0;font-size:12px;color:#f0e7d3}
+    nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
+    .cta{background:var(--gold);color:var(--navy);padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:800}
+
+    /* Hero */
+    .hero{background-size:cover;background-position:center;padding:84px 0;border-bottom:8px solid #fff}
+    .hero-inner{max-width:var(--max-width);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center}
+    .hero h2{font-family:Playfair Display;color:var(--beige);font-size:44px;margin:0 0 14px;text-shadow:0 6px 22px rgba(0,0,0,0.6)}
+    .hero p{color:#f1e8d8;margin:0 0 18px;font-size:16px}
+    .subtle{color:#f6ead0}
+
+    .book-card{background:linear-gradient(180deg,#fff, #fbf7f2);border-radius:14px;padding:18px;box-shadow:0 12px 36px rgba(9,12,20,0.18);border:1px solid rgba(7,17,36,0.06)}
+    .book-card h3{margin:0 0 12px;color:var(--navy);font-weight:700}
+    .input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #efe6d6;margin-bottom:10px;font-size:14px}
+    .btn-primary{background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:var(--navy);padding:10px 14px;border-radius:10px;border:none;width:100%;cursor:pointer;font-weight:800;box-shadow:0 8px 20px rgba(182,143,42,0.18)}
+
+    /* Packages */
+    .section{padding:56px 0}
+    .section h3{font-family:Playfair Display;font-size:28px;color:var(--navy);margin:0 0 12px}
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+    .card{background:linear-gradient(180deg,#fff,#fbf8f4);border-radius:14px;padding:18px;border:1px solid #efe6d6;box-shadow:0 12px 26px rgba(7,10,14,0.05)}
+    .card h4{margin:6px 0 8px;color:var(--navy)}
+
+    /* Golden accent strip */
+    .accent-strip{background:linear-gradient(90deg,var(--gold-dark),var(--gold));padding:18px;border-radius:10px;color:var(--navy);margin-bottom:18px}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;box-shadow:0 10px 24px rgba(8,12,18,0.2)}
+
+    /* Testimonials */
+    .testimonial{background:linear-gradient(180deg, rgba(212,175,55,0.06), rgba(7,17,36,0.02));padding:18px;border-radius:12px;border:1px solid rgba(212,175,55,0.08)}
+
+    /* Footer */
+    footer{background:#071328;color:#f2e7d0;padding:30px;margin-top:28px}
+    footer a{color:var(--gold);text-decoration:none}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero-inner{grid-template-columns:1fr}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      nav a{display:none}
+      .hero h2{font-size:28px}
+      .gallery img{height:140px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo-mark" id="logoMark">HS</div>
+        <div class="brand-title">
+          <h1>HolySteps Travel Co.</h1>
+          <p>Steps Toward Divinity</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <nav>
+          <a href="#packages">Packages</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="cta" href="#book">Book Now</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero: use a local high-resolution hero image placed at /assets/hero.jpg -->
+    <section class="hero" aria-label="HolySteps hero" id="heroSection" style="background-image:linear-gradient(180deg,rgba(6,8,10,0.4),rgba(6,8,10,0.6)), url('/assets/hero.jpg')">
+      <div class="hero-inner container">
+        <div>
+          <h2>Walk the Sacred Path with Comfort & Devotion</h2>
+          <p class="subtle">HolySteps Travel Co. — Golden devotional Sabarimala pilgrimages with safety-first transport, Irumudi support, and devotee-friendly services.</p>
+
+          <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap">
+            <a href="#packages" class="cta" style="background:linear-gradient(90deg,var(--gold),var(--gold-dark));">View Packages</a>
+            <a href="#contact" class="cta" style="background:transparent;border:2px solid rgba(255,255,255,0.12);color:#fff">Contact Us</a>
+          </div>
+
+          <div style="margin-top:22px">
+            <div class="accent-strip">Special: Senior-friendly routes · Irumudi support · Group discounts</div>
+          </div>
+        </div>
+
+        <aside class="book-card" id="book">
+          <h3>Quick Book</h3>
+          <form id="bookingForm">
+            <input class="input" type="text" id="name" placeholder="Full Name" required>
+            <input class="input" type="tel" id="phone" placeholder="Phone (WhatsApp)" required>
+            <select class="input" id="packageSelect">
+              <option value="1-day">Sabarimala 1-Day Express</option>
+              <option value="2-day">Sabarimala 2-Day Comfort</option>
+              <option value="group">Group / Custom</option>
+              <option value="senior">Senior Care Package</option>
+            </select>
+            <input class="input" type="date" id="date" required>
+            <button type="submit" class="btn-primary">Request Quote</button>
+          </form>
+
+          <p style="font-size:13px;margin-top:10px;color:#6b5b4a">Or message us on WhatsApp</p>
+          <a href="https://wa.me/91XXXXXXXXXX" target="_blank" style="display:inline-block;margin-top:8px;text-decoration:none;padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:#071124;font-weight:800">Chat on WhatsApp</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section class="section container" id="packages">
+      <h3>Featured Sabarimala Packages</h3>
+      <p style="color:#5b4f45;margin-bottom:18px">Devotion-first itineraries with golden hospitality — transparent pricing, licensed vehicles, and guided support.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div style="display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--gold-dark),var(--gold));color:var(--navy);font-weight:800;margin-bottom:8px">Popular</div>
+          <h4>Sabarimala 1-Day Express</h4>
+          <p style="margin:8px 0;color:#444">Day-trip from Pamba — transport, guide, and darshan assistance.</p>
+          <p style="font-weight:800;margin:6px 0">From ₹1,999 / person</p>
+          <button class="btn-primary" style="width:auto;padding:8px 12px" onclick="scrollToBook()">Book</button>
+        </article>
+
+        <article class="card">
+          <h4>Sabarimala 2-Day Comfort</h4>
+          <p style="margin:8px 0;color:#444">Overnight stay near Pamba, priority pickup, Irumudi help, and breakfast included.</p>
+          <p style="font-weight:800;margin:6px 0">From ₹3,999 / person</p>
+          <button class="btn-primary" style="width:auto;padding:8px 12px" onclick="scrollToBook()">Book</button>
+        </article>
+
+        <article class="card">
+          <h4>Senior Care Package</h4>
+          <p style="margin:8px 0;color:#444">Assisted transfers, medical kit, lower-walking routes, and priority rest stops.</p>
+          <p style="font-weight:800;margin:6px 0">Contact for pricing</p>
+          <button class="btn-primary" style="width:auto;padding:8px 12px" onclick="scrollToBook()">Enquire</button>
+        </article>
+
+        <article class="card">
+          <h4>Group & Pilgrim Bus Package</h4>
+          <p style="margin:8px 0;color:#444">Customized for groups — coach booking, dedicated guide, flexible pickup points.</p>
+          <p style="font-weight:800;margin:6px 0">From ₹1,200 / person (group rates)</p>
+          <button class="btn-primary" style="width:auto;padding:8px 12px" onclick="scrollToBook()">Get Quote</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- About + Safety -->
+    <section class="section" style="background:linear-gradient(180deg,#fff,#fbf8f4);">
+      <div class="container">
+        <h3 id="about">About HolySteps</h3>
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start">
+          <div>
+            <p style="color:#3a312b">HolySteps Travel Co. delivers golden devotional Sabarimala experiences — blending tradition and comfort. Our staff are experienced devotees who prioritise safety, Irumudi handling, and respectful guidance.</p>
+            <ul style="color:#4d4136">
+              <li><strong>Gold-standard Care:</strong> Sanitized vehicles, trained drivers, and emergency protocols.</li>
+              <li><strong>Devotee-first:</strong> Irumudi guidance, senior support, and respectful staff.</li>
+              <li><strong>Transparent Pricing:</strong> No hidden fees; clear inclusions and exclusions.</li>
+            </ul>
+          </div>
+          <aside>
+            <div style="background:linear-gradient(180deg,#fff,#fff);border-radius:12px;padding:14px;box-shadow:0 8px 24px rgba(8,10,12,0.06)">
+              <h4 style="margin:0 0 8px">Safety & Comfort Promise</h4>
+              <p style="margin:0;color:#6b5b4a;font-size:14px">Licensed vehicles • Sanitized • First-aid kits • Experienced staff</p>
+              <hr style="margin:12px 0;border:none;border-top:1px solid #f0e6d6">
+              <h4 style="margin:8px 0 6px">Support</h4>
+              <p style="margin:0;color:#6b5b4a;font-size:14px">24/7 WhatsApp support for bookings and assistance.</p>
+              <a href="https://wa.me/91XXXXXXXXXX" target="_blank" style="display:inline-block;margin-top:12px;padding:10px 12px;border-radius:10px;background:linear-gradient(90deg,var(--gold),var(--gold-dark));color:#071124;text-decoration:none;font-weight:800">Message Support</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery: local high-resolution files placed in /assets/ -->
+    <section class="section container">
+      <h3>Divine Moments</h3>
+      <p style="color:#5b4f45;margin-bottom:12px">High-resolution Sabarimala & Pamba photos that convey devotion and the pilgrimage spirit.</p>
+
+      <div class="gallery" aria-hidden="false">
+        <img src="/assets/gallery-01.jpg" alt="Sabarimala 18 steps">
+        <img src="/assets/gallery-02.jpg" alt="Pamba river devotees">
+        <img src="/assets/gallery-03.jpg" alt="Sabarimala temple view at dusk">
+        <img src="/assets/gallery-04.jpg" alt="Pilgrims approaching Sannidhanam">
+        <img src="/assets/gallery-05.jpg" alt="Devotees at Pamba ghats">
+        <img src="/assets/gallery-06.jpg" alt="Golden temple silhouette">
+      </div>
+
+      <p style="font-size:13px;color:#8a7b63;margin-top:10px">Instructions: Replace the files above by uploading **high-resolution** images to the website's <code>/assets/</code> folder with the exact filenames: <code>hero.jpg</code>, <code>gallery-01.jpg</code> ... <code>gallery-06.jpg</code>. Use licensed images from Kerala Tourism or paid stock sources listed below (I included direct links and guidance).</p>
+
+      <div style="margin-top:10px;padding:12px;background:#fff8ef;border-radius:10px;border:1px solid #f0e0c8;color:#4d3f2f">
+        <strong>Recommended image sources (licensed / high-res):</strong>
+        <ol style="margin:8px 0 0 18px">
+          <li>Kerala Tourism — Sabarimala photo gallery (official, high-quality images). Use images with explicit permission or contact Kerala Tourism for licensing. See: Kerala Tourism Sabarimala Photo Gallery. citeturn0search0</li>
+          <li>Sabarimala official image gallery (Travancore Devaswom Board / Sabarimala site) — high-quality onsite photos; check usage terms. citeturn0search3</li>
+          <li>Paid stock: Shutterstock — extensive Sabarimala/pilgrimage imagery; royalty-free licensing for commercial use. Example collection. citeturn0search1</li>
+          <li>Paid stock: Getty Images — premium editorial & commercial images; ideal for hero shots. citeturn0search2</li>
+          <li>Other stock agencies: Dreamstime, Adobe Stock, and Alamy also host high-res Sabarimala images suitable for commercial licensing. citeturn0search9turn0search5</li>
+        </ol>
+      </div>
+
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section container">
+      <h3>Testimonials</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px">
+        <div class="testimonial">
+          <strong>Rajan P.</strong>
+          <p style="margin:8px 0;color:#444">"Excellent service. Drivers were respectful and the Irumudi help was very useful. Will travel again with HolySteps."</p>
+        </div>
+        <div class="testimonial">
+          <strong>Leela K.</strong>
+          <p style="margin:8px 0;color:#444">"Senior-friendly approach made the trip peaceful for my parents. Thank you!"</p>
+        </div>
+        <div class="testimonial">
+          <strong>Group from Coimbatore</strong>
+          <p style="margin:8px 0;color:#444">"Seamless coach booking and excellent coordination. Strongly recommended for group yatra."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section container" id="contact">
+      <h3>Contact & Bookings</h3>
+      <div style="display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start">
+        <div>
+          <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <input class="input" type="text" name="name" placeholder="Full name" required>
+            <input class="input" type="email" name="email" placeholder="Email" required>
+            <input class="input" type="tel" name="phone" placeholder="Phone (WhatsApp)" required>
+            <textarea class="input" name="message" placeholder="How can we help?" rows="5"></textarea>
+            <button type="submit" class="btn-primary">Send Enquiry</button>
+          </form>
+        </div>
+        <aside style="background:linear-gradient(180deg,#fff,#fff);border-radius:12px;padding:18px;box-shadow:0 8px 20px rgba(10,10,10,0.06)">
+          <h4>Get in touch</h4>
+          <p style="margin:6px 0;color:#444">Phone: <a href="tel:+91XXXXXXXXXX">+91-XXXXXXXXXX</a></p>
+          <p style="margin:6px 0;color:#444">WhatsApp: <a href="https://wa.me/91XXXXXXXXXX">+91-XXXXXXXXXX</a></p>
+          <p style="margin:6px 0;color:#444">Email: <a href="mailto:info@yourdomain.com">info@yourdomain.com</a></p>
+          <p style="margin-top:10px;color:#6b5b4a">Office hours: Mon–Sun 06:00–22:00</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <div style="font-weight:700;font-family:Playfair Display;color:var(--beige)">HolySteps Travel Co.</div>
+        <div style="font-size:13px;color:#e9ddc4">Pilgrimage, Perfected.</div>
+        <div style="font-size:11px;color:#cfc3a8;margin-top:8px">Image sourcing notes: use licensed images from Kerala Tourism or purchase royalty-free commercial licenses from stock sites (Shutterstock, Getty, Dreamstime, Adobe Stock). See source links in code comments. </div>
+      </div>
+      <div style="font-size:14px;color:#f1e7cf">© <span id="year"></span> HolySteps Travel Co. · <a href="#privacy">Privacy</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function scrollToBook(){document.getElementById('book').scrollIntoView({behavior:'smooth'});}
+
+    document.getElementById('bookingForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const phone=document.getElementById('phone').value.trim();
+      const pkg=document.getElementById('packageSelect').value;
+      const date=document.getElementById('date').value;
+      if(!name||!phone||!date){alert('Please complete the form.');return}
+      const msg = encodeURIComponent(`Hello HolySteps, I would like a quote for ${pkg} on ${date}. Name: ${name}, Phone: ${phone}`);
+      window.open('https://wa.me/91XXXXXXXXXX?text='+msg,'_blank');
+    });
+
+    document.getElementById('contactForm').addEventListener('submit',function(){
+      setTimeout(()=>alert('Thanks — your enquiry has been submitted.'),300);
+    });
+  </script>
+
+  <!--
+    Implementation instructions:
+    1) Download high-resolution, commercially licensed images (hero + 6 gallery images). Recommended sources:
+       - Kerala Tourism Sabarimala photo gallery (official) — https://www.keralatourism.org/sabarimala/photo-gallery. citeturn0search0
+       - Sabarimala official image gallery (Travancore Devaswom Board) — https://sabarimala.kerala.gov.in/imagegallery. citeturn0search3
+       - Shutterstock (paid stock) — search "Sabarimala" and download high-res with commercial license. citeturn0search1
+       - Getty Images (paid/premium) — Sabarimala collections for hero imagery. citeturn0search2
+       - Dreamstime / Adobe Stock for alternatives. citeturn0search9turn0search5
+
+    2) Resize & optimize images for web (suggested sizes):
+       - hero.jpg: 2000×1200 px, JPEG, quality 82
+       - gallery images: 1600×1000 px, JPEG, quality 78
+       - create WebP fallbacks if you like (hero.webp, gallery-01.webp, ...)
+
+    3) Upload the images to your hosting under the folder <site-root>/assets/ with filenames:
+       - hero.jpg
+       - gallery-01.jpg
+       - gallery-02.jpg
+       - gallery-03.jpg
+       - gallery-04.jpg
+       - gallery-05.jpg
+       - gallery-06.jpg
+
+    4) Replace the logo mark: put your SVG/PNG at /assets/logo.svg and use it by replacing the element with an <img>.
+
+    5) Test locally by running a static server (e.g. `npx http-server` or open index.html via hosting) and verify at different breakpoints.
+
+    6) Attribution: If using Kerala Tourism or Commons images that require attribution, include credit lines in the footer or marketing materials as required by the license.
+  -->
+</body>
+</html>
